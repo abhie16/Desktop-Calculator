@@ -3,6 +3,7 @@
 ################################################################################
 
 *.vsidx
+/.vs
 /.vs/Abhishek_pandey_intern_iimt/v17/.wsuo
 /.vs/slnx.sqlite
 /.vs/tasks.vs.json
