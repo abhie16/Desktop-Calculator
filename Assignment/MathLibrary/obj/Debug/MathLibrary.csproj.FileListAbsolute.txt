@@ -1,0 +1,6 @@
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\MathLibrary\MathLibrary\bin\Debug\MathLibrary.dll
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\MathLibrary\MathLibrary\bin\Debug\MathLibrary.pdb
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\MathLibrary\MathLibrary\obj\Debug\MathLibrary.csproj.AssemblyReference.cache
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\MathLibrary\MathLibrary\obj\Debug\MathLibrary.csproj.CoreCompileInputs.cache
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\MathLibrary\MathLibrary\obj\Debug\MathLibrary.dll
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\MathLibrary\MathLibrary\obj\Debug\MathLibrary.pdb
