@@ -9,3 +9,14 @@ C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\MathLibrary\TestingConsol
 C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\MathLibrary\TestingConsoleApp\obj\Debug\TestingConsoleApp.csproj.CopyComplete
 C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\MathLibrary\TestingConsoleApp\obj\Debug\TestingConsoleApp.exe
 C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\MathLibrary\TestingConsoleApp\obj\Debug\TestingConsoleApp.pdb
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\TestingConsoleApp\bin\Debug\TestingConsoleApp.exe.config
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\TestingConsoleApp\bin\Debug\TestingConsoleApp.exe
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\TestingConsoleApp\bin\Debug\TestingConsoleApp.pdb
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\TestingConsoleApp\bin\Debug\MathLibrary.dll
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\TestingConsoleApp\bin\Debug\MathLibrary.pdb
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\TestingConsoleApp\obj\Debug\TestingConsoleApp.csproj.AssemblyReference.cache
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\TestingConsoleApp\obj\Debug\TestingConsoleApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\TestingConsoleApp\obj\Debug\TestingConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\TestingConsoleApp\obj\Debug\TestingConsoleApp.csproj.CopyComplete
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\TestingConsoleApp\obj\Debug\TestingConsoleApp.exe
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\TestingConsoleApp\obj\Debug\TestingConsoleApp.pdb

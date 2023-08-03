@@ -10,10 +10,12 @@ namespace MathLibrary
     {
         public override double Evaluate (double[] operand)
         {
-            double degree = operand[0] * 3.14 / 180;
+            //converting degree to radian;
+            double radian = operand[0] * 3.14 / 180;
+
             try
             {
-                return Math.Round(Math.Sin(degree));
+                return Math.Round(Math.Sin(radian));
             }
             catch
             {

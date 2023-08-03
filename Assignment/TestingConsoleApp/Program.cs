@@ -13,10 +13,8 @@ namespace TestingConsoleApp
         {
             try
             {
-                UnaryOperation obj = new SquareOperation();
-                double[] arr = { 4 ,12};
-                double ans = obj.Evaluate(arr);
-                Console.WriteLine(ans);
+                ExpressionEvaluator obj = new ExpressionEvaluator();
+                Console.WriteLine(obj.Evaluate());
             }
             catch (Exception ex)
             {
