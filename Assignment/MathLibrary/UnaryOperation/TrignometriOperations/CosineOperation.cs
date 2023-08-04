@@ -19,7 +19,7 @@ namespace MathLibrary
             }
             catch
             {
-                throw new ArgumentException("Invalid Input");
+                throw new ExceptionHandling(MessageResource.InvalidInput);
             }
         }
 

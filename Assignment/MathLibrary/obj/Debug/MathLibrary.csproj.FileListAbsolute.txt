@@ -10,3 +10,5 @@ C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\ob
 C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\obj\Debug\MathLibrary.csproj.CoreCompileInputs.cache
 C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\obj\Debug\MathLibrary.dll
 C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\obj\Debug\MathLibrary.pdb
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\obj\Debug\MathLibrary.MessageResource.resources
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\obj\Debug\MathLibrary.csproj.GenerateResource.cache

@@ -45,6 +45,14 @@
     <Compile Include="BinaryOperation\AdditionOperation.cs" />
     <Compile Include="BinaryOperation\BinaryOperation.cs" />
     <Compile Include="BinaryOperation\DivisionOperation.cs" />
+    <Compile Include="Evaluation\Tokenization.cs" />
+    <Compile Include="Evaluation\PostfixConversion.cs" />
+    <Compile Include="ExceptionHandling.cs" />
+    <Compile Include="MessageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UnaryOperation\ExponentialOperations\ReciprocalOperation.cs" />
     <Compile Include="UnaryOperation\ExponentialOperations\CubeOperation.cs" />
     <Compile Include="UnaryOperation\ExponentialOperations\SquareOperation.cs" />
@@ -60,6 +68,12 @@
     <Compile Include="BinaryOperation\SubtractionOperation.cs" />
     <Compile Include="UnaryOperation\TrignometriOperations\SineOperation.cs" />
     <Compile Include="UnaryOperation\UnaryOperation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MessageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

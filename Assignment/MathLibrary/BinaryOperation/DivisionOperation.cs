@@ -12,12 +12,12 @@ namespace MathLibrary
         {
             if (operands[0] == 0)
             {
-                throw new ArithmeticException("Denominator Should be non-zero");
+                throw new ExceptionHandling(MessageResource.DividedByZero);
             }
 
             if (operands.Length != 2)
             {
-                throw new ArgumentException("Not Correct Number of Inputs");
+                throw new ExceptionHandling(MessageResource.InvalidInput);
             }
 
             return operands[1] / operands[0];

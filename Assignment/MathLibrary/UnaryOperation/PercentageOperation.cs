@@ -12,7 +12,7 @@ namespace MathLibrary
         {
             if (operand.Length != 1)
             {
-                throw new ArgumentException("Invalid Input");
+                throw new ExceptionHandling(MessageResource.ArgumentException);
             }
             return operand[0]/100;
         }

@@ -12,7 +12,7 @@ namespace MathLibrary
         {   
             if(operands.Length != 2)
             {
-                throw new ArgumentException("Not Correct Number of Inputs");
+                throw new ExceptionHandling(MessageResource.ArgumentException);
             } 
 
             return operands[1] + operands[0];
