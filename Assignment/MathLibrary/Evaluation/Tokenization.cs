@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathLibrary
 {
-    public class Tokenization
+    public class Tokenization : Operators
     {
         
 
@@ -30,7 +30,7 @@ namespace MathLibrary
 
                     Tokens.Add(token);
                 }
-                else if (((expression[index] >= '%' && expression[index] <= '/') || expression[index] == '^') && index < expression.Length)
+                else if ((expression[index] >= '%' && expression[index] <= '/') && index < expression.Length)
                 {
                     token = expression[index].ToString();
                     Tokens.Add(token);

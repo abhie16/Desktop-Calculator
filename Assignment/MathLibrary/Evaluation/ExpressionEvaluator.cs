@@ -6,20 +6,8 @@ using System.Threading.Tasks;
 
 namespace MathLibrary
 {
-    public class ExpressionEvaluator
+    public class ExpressionEvaluator : Operators
     {
-        private static Dictionary<String, Type> OperatorToBinaryClassMap = new Dictionary<String, Type>()
-        {
-            {"+",typeof(AdditionOperation)},
-            {"-",typeof(SubtractionOperation)},
-            {"/",typeof(DivisionOperation)},
-            {"*",typeof(MultiplicationOperation)},
-        };
-
-        private bool isOperator(String Operator)
-        {
-            return OperatorToBinaryClassMap.ContainsKey(Operator);
-        }
         
         public double Evaluate(String Expression) {
             Stack<double> OperandStack = new Stack<double>();
@@ -49,6 +37,20 @@ namespace MathLibrary
 
                         var BinaryOperation = Activator.CreateInstance(BinaryClassOperation) as IOperation;
                         double result = BinaryOperation.Evaluate(new double[] {Operand2, Operand1});
+
+                        OperandStack.Push(result);
+                    }
+                    if (OperatorToUnaryClassMap.TryGetValue(Token, out Type UnaryClassOperation))
+                    {
+                        if (OperandStack.Count < 1)
+                        {
+                            throw new ExceptionHandling(MessageResource.InvalidExpression);
+                        }
+
+                        double Operand = OperandStack.Pop();
+
+                        var UnaryOperation = Activator.CreateInstance(UnaryClassOperation) as IOperation;
+                        double result = UnaryOperation.Evaluate(new double[] { Operand });
 
                         OperandStack.Push(result);
                     }

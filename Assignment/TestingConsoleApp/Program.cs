@@ -19,27 +19,27 @@ namespace TestingConsoleApp
                 /*
                 
                     ExpressionEvaluator obj = new ExpressionEvaluator();
-                    double result = obj.Evaluate("32/16+10*50");
+                    double result = obj.Evaluate("log10+log10");
                     Console.WriteLine(result);
-                
                 */
+                
 
                 // testing after implementing convert to token method
 
-                /*
-                    String exp = "32/16+10*150/25";
+                
+                String exp = "sq2+cube2+sin90/6";
                     String[] tokens = Tokenization.ConvertToTokens(exp);
                     for(int i = 0; i < tokens.Length; i++) {
                         Console.WriteLine(tokens[i]);
                     }
                     Console.Write( PostfixConversion.InfixToPostfixExpression(tokens));
                 
-                */
+                
                 // testing after implementing postfix conversion method
                 // String exp = "32^3+10*10/25";
                 // Console.WriteLine(PostfixConversion.InfixToPostfixExpression(exp));
-                DivisionOperation obj = new DivisionOperation();
-                Console.WriteLine(obj.Evaluate(new double[] { 0, 10 }));
+                // DivisionOperation obj = new DivisionOperation();
+                // Console.WriteLine(obj.Evaluate(new double[] { 0, 10 }));
 
             }
             catch (Exception ex)
