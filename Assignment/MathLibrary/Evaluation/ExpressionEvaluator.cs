@@ -30,7 +30,7 @@ namespace MathLibrary
                     {
                         if(OperandStack.Count < 2)
                         {
-                            throw new ExceptionHandling(MessageResource.InvalidExpression);
+                            throw new ExpressionExceptions(MessageResource.InvalidExpression);
                         }
 
                         double Operand2 = OperandStack.Pop();
@@ -45,7 +45,7 @@ namespace MathLibrary
                     {
                         if (OperandStack.Count < 1)
                         {
-                            throw new ExceptionHandling(MessageResource.InvalidExpression);
+                            throw new ExpressionExceptions(MessageResource.InvalidExpression);
                         }
 
                         double Operand = OperandStack.Pop();
@@ -57,18 +57,18 @@ namespace MathLibrary
                     }
                     else
                     {
-                        throw new ExceptionHandling(MessageResource.InvalidPostfixExpression);
+                        throw new ExpressionExceptions(MessageResource.InvalidPostfixExpression);
                     }
                 }
                 else
                 {
-                    throw new ExceptionHandling(MessageResource.InvalidExpression);
+                    throw new ExpressionExceptions(MessageResource.InvalidExpression);
                 }
             }
 
             if(OperandStack.Count != 1)
             {
-                 throw new ExceptionHandling(MessageResource.InvalidExpression);
+                 throw new ExpressionExceptions(MessageResource.InvalidExpression);
             }
 
             return OperandStack.Pop();

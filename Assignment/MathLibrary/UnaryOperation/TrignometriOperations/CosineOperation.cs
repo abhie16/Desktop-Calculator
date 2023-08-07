@@ -19,7 +19,7 @@ namespace MathLibrary
             }
             catch
             {
-                throw new ExceptionHandling(MessageResource.InvalidInput);
+                throw new ExpressionExceptions(MessageResource.InvalidInput);
             }
         }
 

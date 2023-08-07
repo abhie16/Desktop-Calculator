@@ -12,7 +12,7 @@ namespace MathLibrary
         {
             if (operand.Length != 1)
             {
-                throw new ExceptionHandling(MessageResource.ArgumentException);
+                throw new ExpressionExceptions(MessageResource.ArgumentException);
             }
             return Power(operand[0], 3);
         }

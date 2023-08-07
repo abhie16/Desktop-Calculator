@@ -12,12 +12,12 @@ namespace MathLibrary
         {
             if (operands[0] == 0)
             {
-                throw new ExceptionHandling(MessageResource.DividedByZero);
+                throw new ExpressionExceptions(MessageResource.DividedByZero);
             }
 
             if (operands.Length != 2)
             {
-                throw new ExceptionHandling(MessageResource.InvalidInput);
+                throw new ExpressionExceptions(MessageResource.InvalidInput);
             }
 
             return operands[1] / operands[0];

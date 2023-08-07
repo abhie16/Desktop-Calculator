@@ -12,7 +12,7 @@ namespace MathLibrary
             }
             catch
             {
-                throw new ExceptionHandling(MessageResource.ArgumentException);
+                throw new ExpressionExceptions(MessageResource.ArgumentException);
             }
         }
     }
