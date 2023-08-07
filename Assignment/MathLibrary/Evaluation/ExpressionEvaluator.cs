@@ -15,7 +15,8 @@ namespace MathLibrary
 
             String PostfixExpression = PostfixConversion.InfixToPostfixExpression(Tokens);
 
-            String[] PostfixTokens = PostfixExpression.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            String[] PostfixTokens = PostfixExpression.Split(" ".ToCharArray());
+            
 
             foreach(String Token in PostfixTokens )
             {
@@ -40,7 +41,7 @@ namespace MathLibrary
 
                         OperandStack.Push(result);
                     }
-                    if (OperatorToUnaryClassMap.TryGetValue(Token, out Type UnaryClassOperation))
+                    else if (OperatorToUnaryClassMap.TryGetValue(Token, out Type UnaryClassOperation))
                     {
                         if (OperandStack.Count < 1)
                         {

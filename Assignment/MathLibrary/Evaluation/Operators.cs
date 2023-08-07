@@ -27,6 +27,7 @@ namespace MathLibrary
             {"sq",typeof(SquareOperation)},
             {"cube",typeof(CubeOperation)},
             {"reci",typeof(ReciprocalOperation)},
+            {"sqrt",typeof(SqrtOperation) },
             {"%",typeof(PercentageOperation)},
             {"neg",typeof(NegationOperation)},
             {"sin",typeof(SineOperation)},
