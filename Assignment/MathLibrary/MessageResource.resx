@@ -120,6 +120,9 @@
   <data name="ArgumentException" xml:space="preserve">
     <value>Invalid Number of Arguments</value>
   </data>
+  <data name="ConfigFilePath" xml:space="preserve">
+    <value>C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\OperatorConfigFile.json</value>
+  </data>
   <data name="DividedByZero" xml:space="preserve">
     <value>Divider should be non-zero</value>
   </data>

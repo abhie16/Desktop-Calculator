@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathLibrary
 {
-    public class Tokenization : Operators
+    public class Tokenization : OperationMapping
     {
         
 
@@ -22,7 +22,7 @@ namespace MathLibrary
                 String token = "";
                 if (index < expression.Length && expression[index] <= '9' && expression[index] >= '0')
                 {
-                    while (index < expression.Length && (expression[index] <= '9' && expression[index] >= '0'))
+                    while (index < expression.Length && ((expression[index] <= '9' && expression[index] >= '0') || expression[index] == '.'))
                     {
                         token += expression[index]+"";
                         index++;

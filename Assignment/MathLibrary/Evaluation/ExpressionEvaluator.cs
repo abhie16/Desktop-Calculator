@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathLibrary
 {
-    public class ExpressionEvaluator : Operators
+    public class ExpressionEvaluator : OperationMapping
     {
         
         public double Evaluate(String Expression) {
@@ -24,7 +24,7 @@ namespace MathLibrary
                 {
                     OperandStack.Push(operand);
                 }
-                else if(isOperator(Token))
+                else if(IsOperator(Token))
                 {
                     if(OperatorToBinaryClassMap.TryGetValue(Token, out Type BinaryClassOperation))
                     {
@@ -51,7 +51,7 @@ namespace MathLibrary
                         double Operand = OperandStack.Pop();
 
                         var UnaryOperation = Activator.CreateInstance(UnaryClassOperation) as IOperation;
-                        double result = UnaryOperation.Evaluate(new double[] { Operand });
+                        double result = UnaryOperation.Evaluate(new double[] {Operand});
 
                         OperandStack.Push(result);
                     }

@@ -70,6 +70,15 @@ namespace MathLibrary {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\OperatorConfigFile.json.
+        /// </summary>
+        internal static string ConfigFilePath {
+            get {
+                return ResourceManager.GetString("ConfigFilePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Divider should be non-zero.
         /// </summary>
         internal static string DividedByZero {

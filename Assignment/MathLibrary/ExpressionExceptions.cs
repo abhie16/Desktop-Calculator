@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MathLibrary
 {
-    public class ExceptionHandling : Exception
+    public class ExpressionExceptions : Exception
     {
-        public ExceptionHandling(String message) : base(message) { }
+        public ExpressionExceptions(String message) : base(message) { }
     }
 }

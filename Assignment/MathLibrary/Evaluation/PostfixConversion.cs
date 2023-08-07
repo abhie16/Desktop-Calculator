@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathLibrary
 {
-    public class PostfixConversion : Operators
+    public class PostfixConversion : OperationMapping
     {
         public static string InfixToPostfixExpression(string[] infixExpression)
         {
@@ -40,7 +40,7 @@ namespace MathLibrary
                     if (stack.Count > 0
                         && stack.Peek() != "(")
                     {
-                        throw new Exception();
+                        throw new ExpressionExceptions(MessageResource.InvalidExpression);
                     }
                     else
                     {

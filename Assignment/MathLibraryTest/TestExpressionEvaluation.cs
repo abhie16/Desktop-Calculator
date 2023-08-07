@@ -28,10 +28,10 @@ namespace MathLibraryTest
         [TestMethod]
         public void TestExpressionEvaluator()
         {
-            String Expression = "2+2/2*4";
+            String Expression = "7+4-4";
             ExpressionEvaluator Evaluator = new ExpressionEvaluator();
             double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 6;
+            double ExpectedResult = 7;
             Assert.AreEqual(ExpectedResult, ActualResult);
         }
     }
