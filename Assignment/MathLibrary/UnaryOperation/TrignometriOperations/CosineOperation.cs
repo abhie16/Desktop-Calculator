@@ -15,7 +15,7 @@ namespace MathLibrary
 
             try
             {
-                return Math.Round(Math.Cos(radian));
+                return Math.Cos(radian);
             }
             catch
             {
