@@ -1,10 +1,5 @@
 ﻿using MathLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MathLibraryTest
 {
@@ -12,43 +7,49 @@ namespace MathLibraryTest
     public class TestBinaryOperations
     {
         [TestMethod]
-        public void TestAddition()
+        [DataRow(new string[] {"2+2","2+2+2"}, new double[] {4, 6} )]
+        public void TestAddition(string[] expressions, double[] expectedResults)
         {
-            String Expression = "2+2";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 4;
-            Assert.AreEqual(ExpectedResult, ActualResult);
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+
+            for(int index=0; index<expressions.Length; index++)
+            {
+                string exp= expressions[index];
+                double actualResult = evaluator.Evaluate(exp);
+                double expectedResult = expectedResults[index];
+
+                Assert.AreEqual(expectedResult, actualResult);
+            }
         }
 
         [TestMethod]
         public void TestSubtraction()
         {
-            String Expression = "2-2";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 0;
-            Assert.AreEqual(ExpectedResult, ActualResult);
+            string expression = "2-2-2";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = -2;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
         public void TestMultiplication()
         {
-            String Expression = "2*2";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 4;
-            Assert.AreEqual(ExpectedResult, ActualResult);
+            string expression = "2*2";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = 4;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
         public void TestDivision()
         {
-            String Expression = "2/2";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 1;
-            Assert.AreEqual(ExpectedResult, ActualResult);
+            string expression = "2/2";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = 1;
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }

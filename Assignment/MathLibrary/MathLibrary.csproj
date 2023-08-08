@@ -78,7 +78,7 @@
     <Compile Include="BinaryOperation\DivisionOperation.cs" />
     <Compile Include="Evaluation\Tokenization.cs" />
     <Compile Include="Evaluation\PostfixConversion.cs" />
-    <Compile Include="ExpressionExceptions.cs" />
+    <Compile Include="ExpressionException.cs" />
     <Compile Include="MemoryUtility.cs" />
     <Compile Include="MessageResource.Designer.cs">
       <AutoGen>True</AutoGen>

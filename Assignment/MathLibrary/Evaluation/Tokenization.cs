@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace MathLibrary
 {
@@ -10,40 +6,40 @@ namespace MathLibrary
     {
         
 
-        public static String[] ConvertToTokens(String expression)
+        public static string[] ConvertToTokens(string expression)
         {
-            bool DecimalFlag = true;
+            bool decimalFlag = true;
 
             if (expression == null) return null;
                 
-            List<String> Tokens = new List<String>();
+            List<string> tokens = new List<string>();
 
             int index = 0;
             while(index < expression.Length)
             {
-                String token = "";
+                string token = "";
                 if (index < expression.Length && expression[index] <= '9' && expression[index] >= '0')
                 {
                     while (index < expression.Length && ((expression[index] <= '9' && expression[index] >= '0') || expression[index] == '.'))
                     {
-                        if(expression[index] == '.' && DecimalFlag == false)
+                        if(expression[index] == '.' && decimalFlag == false)
                         {
-                            throw new ExpressionExceptions(MessageResource.InvalidDecimal);
+                            throw new ExpressionException(MessageResource.InvalidDecimal);
                         }
                         if (expression[index] == '.')
                         {
-                            DecimalFlag = false;
+                            decimalFlag = false;
                         }
                         token += expression[index]+"";
                         index++;
                     }
 
-                    Tokens.Add(token);
+                    tokens.Add(token);
                 }
                 else if ((expression[index] < 'a' || expression[index] > 'z') && (expression[index] < 'A' || expression[index] > 'Z') && (expression[index] < '0' || expression[index] > '9') && index < expression.Length)
                 {
                     token = expression[index].ToString();
-                    Tokens.Add(token);
+                    tokens.Add(token);
                     index++;
                 }
                 else
@@ -54,12 +50,12 @@ namespace MathLibrary
                         index++;
                     }
 
-                    Tokens.Add(token);
+                    tokens.Add(token);
                 }
                 
             }
             
-            return Tokens.ToArray();
+            return tokens.ToArray();
         }
 
     }

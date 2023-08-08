@@ -1,14 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MathLibrary
 {
     public class MemoryUtility
     {
         private double _memoryValue = 0.0;
+
+        public void SaveToMemory(String result)
+        {
+            Double.TryParse(result, out _memoryValue);
+        }
 
         public void AddToMemory(double value)
         {

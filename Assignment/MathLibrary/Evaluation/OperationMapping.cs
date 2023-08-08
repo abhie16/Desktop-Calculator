@@ -1,21 +1,16 @@
 ﻿using System;
-using System.Text.Json;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
 
 namespace MathLibrary
 {
     public class OperationMapping
     {
-        protected bool IsOperator(String Operator)
+        protected bool IsOperator(string operatorSign)
         {
-            return OperatorToBinaryClassMap.ContainsKey(Operator) || OperatorToUnaryClassMap.ContainsKey(Operator);
+            return OperatorToBinaryClassMap.ContainsKey(operatorSign) || OperatorToUnaryClassMap.ContainsKey(operatorSign);
         }
 
-        protected Dictionary<String, Type> OperatorToBinaryClassMap = new Dictionary<String, Type>()
+        protected Dictionary<string, Type> OperatorToBinaryClassMap = new Dictionary<string, Type>()
         {
             {"+",typeof(AdditionOperation)},
             {"-",typeof(SubtractionOperation)},
@@ -23,7 +18,7 @@ namespace MathLibrary
             {"*",typeof(MultiplicationOperation)},
         };
 
-        protected Dictionary<String, Type> OperatorToUnaryClassMap = new Dictionary<String, Type>()
+        protected Dictionary<string, Type> OperatorToUnaryClassMap = new Dictionary<string, Type>()
         {
             {"log",typeof(LogarithmicOperation)},
             {"sq",typeof(SquareOperation)},
@@ -36,9 +31,9 @@ namespace MathLibrary
             {"cos",typeof(CosineOperation)},
         };
 
-        public static int OperatorPrecedence(String op)
+        public static int OperatorPrecedence(string operatorSign)
         {
-            switch (op)
+            switch (operatorSign)
             {
                 case "+":
                 case "-":

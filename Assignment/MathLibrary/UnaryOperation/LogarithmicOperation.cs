@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MathLibrary
 {
@@ -13,7 +9,7 @@ namespace MathLibrary
 
             if (operand[0] == 0 || operand.Length != 1)
             {
-                throw new ExpressionExceptions(MessageResource.InvalidInput);
+                throw new ExpressionException(MessageResource.InvalidInput);
             }
 
             return Math.Log10(operand[0]);

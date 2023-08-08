@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace MathLibrary
 {
     public class DivisionOperation : BinaryOperation
@@ -12,12 +7,12 @@ namespace MathLibrary
         {
             if (operands[0] == 0)
             {
-                throw new ExpressionExceptions(MessageResource.DividedByZero);
+                throw new ExpressionException(MessageResource.DividedByZero);
             }
 
             if (operands.Length != 2)
             {
-                throw new ExpressionExceptions(MessageResource.InvalidInput);
+                throw new ExpressionException(MessageResource.InvalidInput);
             }
 
             return operands[1] / operands[0];

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MathLibrary
 {
@@ -11,68 +8,68 @@ namespace MathLibrary
         public static string InfixToPostfixExpression(string[] infixExpression)
         {
 
-            List<String> PostfixExpressionList = new List<String>();
+            List<string> postfixExpressionList = new List<string>();
+            string postfixExpression = "";
 
-            Stack<String> stack = new Stack<String>();
+            Stack<string> operatorStack = new Stack<string>();
 
             for (int i = 0; i < infixExpression.Length; ++i)
             {
-                String Token = infixExpression[i];
+                string token = infixExpression[i];
 
-                if (Double.TryParse(Token,out double TokenValue))
+                if (Double.TryParse(token,out double tokenValue))
                 {
-                    PostfixExpressionList.Add(TokenValue.ToString());
+                    postfixExpressionList.Add(tokenValue.ToString());
                 }
 
-                else if (Token == "(")
+                else if (token == "(")
                 {
-                    stack.Push(Token);
+                    operatorStack.Push(token);
                 }
 
-                else if (Token == ")")
+                else if (token == ")")
                 {
-                    while (stack.Count > 0
-                           && stack.Peek() != "(")
+                    while (operatorStack.Count > 0
+                           && operatorStack.Peek() != "(")
                     {
-                        PostfixExpressionList.Add( stack.Pop());
+                        postfixExpressionList.Add(operatorStack.Pop());
                     }
 
-                    if (stack.Count > 0
-                        && stack.Peek() != "(")
+                    if (operatorStack.Count > 0
+                        && operatorStack.Peek() != "(")
                     {
-                        throw new ExpressionExceptions(MessageResource.InvalidExpression);
+                        throw new ExpressionException(MessageResource.InvalidExpression);
                     }
                     else
                     {
-                        stack.Pop();
+                        operatorStack.Pop();
                     }
                 }
 
                 else
                 {
-                    while (stack.Count > 0
-                           && OperatorPrecedence(Token) <= OperatorPrecedence(stack.Peek()))
+                    while (operatorStack.Count > 0
+                           && OperatorPrecedence(token) <= OperatorPrecedence(operatorStack.Peek()))
                     {
-                        PostfixExpressionList.Add(stack.Pop());
+                        postfixExpressionList.Add(operatorStack.Pop());
                     }
-                    stack.Push(Token);
+                    operatorStack.Push(token);
                 }
             }
 
             // Pop all the operators from the stack
-            while (stack.Count > 0)
+            while (operatorStack.Count > 0)
             {
-                PostfixExpressionList.Add(stack.Pop());
-            }
-            String PostfixExpression = "";
-
-            for(int i=0; i<PostfixExpressionList.Count; i++)
-            {
-                PostfixExpression += PostfixExpressionList[i];
-                PostfixExpression += " ";
+                postfixExpressionList.Add(operatorStack.Pop());
             }
 
-            return PostfixExpression.Trim();
+            for(int i=0; i<postfixExpressionList.Count; i++)
+            {
+                postfixExpression += postfixExpressionList[i];
+                postfixExpression += " ";
+            }
+
+            return postfixExpression.Trim();
         }
     }
 }

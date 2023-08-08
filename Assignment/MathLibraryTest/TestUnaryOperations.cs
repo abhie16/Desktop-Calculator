@@ -14,91 +14,91 @@ namespace MathLibraryTest
         [TestMethod]
         public void TestPercentage()
         {
-            String Expression = "25%";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 0.25;
-            Assert.AreEqual(ExpectedResult, ActualResult);
+            string expression = "25%";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = 0.25;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
         public void TestNegation()
         {
-            String Expression = "neg25";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = -25;
-            Assert.AreEqual(ExpectedResult, ActualResult);
+            string expression = "neg25";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = -25;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
         public void TestLogarithmic()
         {
-            String Expression = "log10";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 1;
-            Assert.AreEqual(ExpectedResult, ActualResult);
+            string expression = "log10";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = 1;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
         public void TestCube()
         {
-            String Expression = "cube10";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 1000;
-            Assert.AreEqual(ExpectedResult, ActualResult);
+            string expression = "cube10";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = 1000;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
         public void TestSquare()
         {
-            String Expression = "sq10";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 100;
-            Assert.AreEqual(ExpectedResult, ActualResult);
+            string expression = "sq10";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = 100;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
         public void TestReciprocal()
         {
-            String Expression = "reci10";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 0.1;
-            Assert.AreEqual(ExpectedResult, ActualResult);
+            string expression = "reci10";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = 0.1;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
         public void TestSquareRoot()
         {
-            String Expression = "sqrt81";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 9;
-            Assert.AreEqual(ExpectedResult, ActualResult);
+            string expression = "sqrt81";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = 9;
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
         public void TestSine()
         {
-            String Expression = "sin90";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 1;
-            Assert.AreEqual(ExpectedResult, Math.Round(ActualResult));
+            string expression = "sin90";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = Math.Sin((3.14/180)*90);
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
         public void TestCosine()
         {
-            String Expression = "cos90";
-            ExpressionEvaluator Evaluator = new ExpressionEvaluator();
-            double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 0;
-            Assert.AreEqual(ExpectedResult, Math.Round(ActualResult));
+            string expression = "cos90";
+            ExpressionEvaluator evaluator = new ExpressionEvaluator();
+            double actualResult = evaluator.Evaluate(expression);
+            double expectedResult = Math.Cos((3.14/180)*90);
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
