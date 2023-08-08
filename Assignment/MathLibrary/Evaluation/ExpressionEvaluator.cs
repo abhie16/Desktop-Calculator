@@ -11,7 +11,7 @@ namespace MathLibrary
 
             string postfixExpression = PostfixConversion.InfixToPostfixExpression(Tokenization.ConvertToTokens(expression));
 
-            string[] postfixTokens = postfixExpression.Split(" ".ToCharArray());
+            string[] postfixTokens = postfixExpression.Split();
             
 
             foreach(string token in postfixTokens )

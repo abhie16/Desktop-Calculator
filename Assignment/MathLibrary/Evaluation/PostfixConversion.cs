@@ -9,7 +9,7 @@ namespace MathLibrary
         {
 
             List<string> postfixExpressionList = new List<string>();
-            string postfixExpression = "";
+            string postfixExpression = String.Empty;
 
             Stack<string> operatorStack = new Stack<string>();
 
