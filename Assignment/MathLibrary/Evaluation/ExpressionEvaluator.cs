@@ -33,13 +33,13 @@ namespace MathLibrary
                             throw new ExpressionExceptions(MessageResource.InvalidExpression);
                         }
 
-                        double Operand2 = OperandStack.Pop();
-                        double Operand1 = OperandStack.Pop();
+                         double Operand2 = OperandStack.Pop();
+                         double Operand1 = OperandStack.Pop();
 
-                        var BinaryOperation = Activator.CreateInstance(BinaryClassOperation) as IOperation;
-                        double result = BinaryOperation.Evaluate(new double[] {Operand2, Operand1});
+                         var BinaryOperation = Activator.CreateInstance(BinaryClassOperation) as IOperation;
+                         double result = BinaryOperation.Evaluate(new double[] {Operand2, Operand1});
 
-                        OperandStack.Push(result);
+                         OperandStack.Push(result);
                     }
                     else if (OperatorToUnaryClassMap.TryGetValue(Token, out Type UnaryClassOperation))
                     {

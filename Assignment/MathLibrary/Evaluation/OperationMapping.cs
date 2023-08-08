@@ -10,31 +10,56 @@ namespace MathLibrary
 {
     public class OperationMapping
     {
-        public static Dictionary<String, int> OperatorPrecedenceMap = new Dictionary<String, int>();
-        public Dictionary<String, Type> OperatorToBinaryClassMap = new Dictionary<String, Type>();
-        public Dictionary<String, Type> OperatorToUnaryClassMap = new Dictionary<String, Type>();
-
-        public void MappingOperators()
+        protected bool IsOperator(String Operator)
         {
-            string Json = File.ReadAllText(@MessageResource.ConfigFilePath);
-            Console.WriteLine(Json);
-
-        }
-        protected bool IsOperator(String expOperator)
-        {
-            return OperatorToBinaryClassMap.ContainsKey(expOperator) || OperatorToUnaryClassMap.ContainsKey(expOperator);
+            return OperatorToBinaryClassMap.ContainsKey(Operator) || OperatorToUnaryClassMap.ContainsKey(Operator);
         }
 
-        
-
-
-        public static int OperatorPrecedence(String expOperator)
+        protected static Dictionary<String, Type> OperatorToBinaryClassMap = new Dictionary<String, Type>()
         {
-            if (OperatorPrecedenceMap.ContainsKey(expOperator))
+            {"+",typeof(AdditionOperation)},
+            {"-",typeof(SubtractionOperation)},
+            {"/",typeof(DivisionOperation)},
+            {"*",typeof(MultiplicationOperation)},
+        };
+
+        protected static Dictionary<String, Type> OperatorToUnaryClassMap = new Dictionary<String, Type>()
+        {
+            {"log",typeof(LogarithmicOperation)},
+            {"sq",typeof(SquareOperation)},
+            {"cube",typeof(CubeOperation)},
+            {"reci",typeof(ReciprocalOperation)},
+            {"sqrt",typeof(SqrtOperation) },
+            {"%",typeof(PercentageOperation)},
+            {"neg",typeof(NegationOperation)},
+            {"sin",typeof(SineOperation)},
+            {"cos",typeof(CosineOperation)},
+        };
+
+        protected static int OperatorPrecedence(String op)
+        {
+            switch (op)
             {
-                return OperatorPrecedenceMap[expOperator];
+                case "+":
+                case "-":
+                    return 1;
+
+                case "*":
+                case "/":
+                    return 2;
+
+                case "sq":
+                case "cube":
+                case "log":
+                case "reci":
+                case "%":
+                case "neg":
+                case "sin":
+                case "cos":
+                    return 3;
             }
             return -1;
         }
     }
 }
+

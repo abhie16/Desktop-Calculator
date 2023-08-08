@@ -126,6 +126,9 @@
   <data name="DividedByZero" xml:space="preserve">
     <value>Divider should be non-zero</value>
   </data>
+  <data name="InvalidDecimal" xml:space="preserve">
+    <value>Invalid Decimal Expression</value>
+  </data>
   <data name="InvalidExpression" xml:space="preserve">
     <value>Invalid Expression</value>
   </data>

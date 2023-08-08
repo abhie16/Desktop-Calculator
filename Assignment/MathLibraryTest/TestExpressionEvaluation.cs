@@ -10,9 +10,9 @@ namespace MathLibraryTest
         [TestMethod]
         public void TestTokenization()
         {
-            String Expression = "sq2+cube2+sin90/6";
+            String Expression = "sq2+cube0.01";
             String[] ActualTokens = Tokenization.ConvertToTokens(Expression);
-            String[] ExpectedTokens = { "sq", "2", "+", "cube", "2", "+", "sin", "90", "/", "6" };
+            String[] ExpectedTokens = { "sq", "2", "+", "cube", "0.01" };
             CollectionAssert.AreEqual(ExpectedTokens, ActualTokens);
         }
 
@@ -28,10 +28,10 @@ namespace MathLibraryTest
         [TestMethod]
         public void TestExpressionEvaluator()
         {
-            String Expression = "7+4-4";
+            String Expression = "4+4/2*8";
             ExpressionEvaluator Evaluator = new ExpressionEvaluator();
             double ActualResult = Evaluator.Evaluate(Expression);
-            double ExpectedResult = 7;
+            double ExpectedResult = 20;
             Assert.AreEqual(ExpectedResult, ActualResult);
         }
     }

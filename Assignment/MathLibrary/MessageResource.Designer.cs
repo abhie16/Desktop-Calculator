@@ -88,6 +88,15 @@ namespace MathLibrary {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid Decimal Expression.
+        /// </summary>
+        internal static string InvalidDecimal {
+            get {
+                return ResourceManager.GetString("InvalidDecimal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid Expression.
         /// </summary>
         internal static string InvalidExpression {
