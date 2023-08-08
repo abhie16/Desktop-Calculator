@@ -1,73 +1,67 @@
 {
-  "BinaryClassOperators": [
-    {
-      "Operator": "+",
-      "OperationClass": "AdditionOperation",
-      "Precedence": 1
-    },
-    {
-      "Operator": "-",
-      "OperationClass": "SubtractionOperation",
-      "Precedence": 1
-    },
-    {
-      "Operator": "*",
-      "OperationClass": "MultiplicationOperation",
-      "Precedence": 2
-    },
-    {
-      "Operator": "/",
-      "OperationClass": "DivisionOperation",
-      "Precedence": 2
-    }
-  ],
-
-  "UnaryClassOperators": [
-    {
-      "Operator": "log",
-      "OperationClass": "LogarithmicOperation",
-      "Precedence": 3
-    },
-    {
-      "Operator": "reci",
-      "OperationClass": "ReciprocalOperation",
-      "Precedence": 3
-    },
-    {
-      "Operator": "cube",
-      "OperationClass": "CubeOperation",
-      "Precedence": 3
-    },
-    {
-      "Operator": "sq",
-      "OperationClass": "SquareOperation",
-      "Precedence": 3
-    },
-    {
-      "Operator": "sqrt",
-      "OperationClass": "SqrtOperation",
-      "Precedence": 3
-    },
-    {
-      "Operator": "neg",
-      "OperationClass": "NegationOperation",
-      "Precedence": 3
-    },
-    {
-      "Operator": "%",
-      "OperationClass": "PercentageOperation",
-      "Precedence": 3
-    },
-    {
-      "Operator": "sin",
-      "OperationClass": "SineOperation",
-      "Precedence": 3
-    },
-    {
-      "Operator": "cos",
-      "OperationClass": "CosineOperation",
-      "Precedence": 3
-    }
-  ]
+  "+" : {
+    "Operator": "+",
+    "OperationClass": "AdditionOperation",
+    "Precedence": 1
+  },
+  "-" : {
+    "Operator": "-",
+    "OperationClass": "SubtractionOperation",
+    "Precedence": 1
+  },
+  {
+    "Operator": "*",
+    "OperationClass": "MultiplicationOperation",
+    "Precedence": 2
+  },
+  {
+    "Operator": "/",
+    "OperationClass": "DivisionOperation",
+    "Precedence": 2
+  },
+  {
+    "Operator": "log",
+    "OperationClass": "LogarithmicOperation",
+    "Precedence": 3
+  },
+  {
+    "Operator": "reci",
+    "OperationClass": "ReciprocalOperation",
+    "Precedence": 3
+  },
+  {
+    "Operator": "cube",
+    "OperationClass": "CubeOperation",
+    "Precedence": 3
+  },
+  {
+    "Operator": "sq",
+    "OperationClass": "SquareOperation",
+    "Precedence": 3
+  },
+  {
+    "Operator": "sqrt",
+    "OperationClass": "SqrtOperation",
+    "Precedence": 3
+  },
+  {
+    "Operator": "neg",
+    "OperationClass": "NegationOperation",
+    "Precedence": 3
+  },
+  {
+    "Operator": "%",
+    "OperationClass": "PercentageOperation",
+    "Precedence": 3
+  },
+  {
+    "Operator": "sin",
+    "OperationClass": "SineOperation",
+    "Precedence": 3
+  },
+  {
+    "Operator": "cos",
+    "OperationClass": "CosineOperation",
+    "Precedence": 3
+  }
 }
-
