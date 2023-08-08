@@ -15,7 +15,7 @@ namespace MathLibrary
             return OperatorToBinaryClassMap.ContainsKey(Operator) || OperatorToUnaryClassMap.ContainsKey(Operator);
         }
 
-        protected static Dictionary<String, Type> OperatorToBinaryClassMap = new Dictionary<String, Type>()
+        protected Dictionary<String, Type> OperatorToBinaryClassMap = new Dictionary<String, Type>()
         {
             {"+",typeof(AdditionOperation)},
             {"-",typeof(SubtractionOperation)},
@@ -23,7 +23,7 @@ namespace MathLibrary
             {"*",typeof(MultiplicationOperation)},
         };
 
-        protected static Dictionary<String, Type> OperatorToUnaryClassMap = new Dictionary<String, Type>()
+        protected Dictionary<String, Type> OperatorToUnaryClassMap = new Dictionary<String, Type>()
         {
             {"log",typeof(LogarithmicOperation)},
             {"sq",typeof(SquareOperation)},
@@ -36,7 +36,7 @@ namespace MathLibrary
             {"cos",typeof(CosineOperation)},
         };
 
-        protected static int OperatorPrecedence(String op)
+        public static int OperatorPrecedence(String op)
         {
             switch (op)
             {

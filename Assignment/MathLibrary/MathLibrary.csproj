@@ -79,6 +79,7 @@
     <Compile Include="Evaluation\Tokenization.cs" />
     <Compile Include="Evaluation\PostfixConversion.cs" />
     <Compile Include="ExpressionExceptions.cs" />
+    <Compile Include="MemoryUtility.cs" />
     <Compile Include="MessageResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
