@@ -27,10 +27,10 @@ namespace MathLibraryTest
         [TestMethod]
         public void TestExpressionEvaluator()
         {
-            string expression = "4+4+4";
+            string expression = "sq(sq(3))";
             ExpressionEvaluator evaluator = new ExpressionEvaluator();
             double actualResult = evaluator.Evaluate(expression);
-            double expectedResult = 12;
+            double expectedResult = 81;
             Assert.AreEqual(expectedResult, actualResult);
         }
     }

@@ -44,7 +44,7 @@ namespace MathLibrary
                 }
                 else
                 {
-                    while (expression[index] < '0' || expression[index] > '9' && index < expression.Length)
+                    while ((expression[index] < '0' || expression[index] > '9') && (expression[index] >= 'a' && expression[index] <= 'z') || (expression[index] >= 'A' && expression[index] <= 'Z') && index < expression.Length)
                     {
                         token += expression[index];
                         index++;

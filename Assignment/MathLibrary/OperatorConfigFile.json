@@ -1,65 +1,65 @@
 {
-  "+" : {
+  "+": {
     "Operator": "+",
     "OperationClass": "AdditionOperation",
     "Precedence": 1
   },
-  "-" : {
+  "-": {
     "Operator": "-",
     "OperationClass": "SubtractionOperation",
     "Precedence": 1
   },
-  {
+  "*": {
     "Operator": "*",
     "OperationClass": "MultiplicationOperation",
     "Precedence": 2
   },
-  {
+  "/": {
     "Operator": "/",
     "OperationClass": "DivisionOperation",
     "Precedence": 2
   },
-  {
+  "log": {
     "Operator": "log",
     "OperationClass": "LogarithmicOperation",
     "Precedence": 3
   },
-  {
+  "reci": {
     "Operator": "reci",
     "OperationClass": "ReciprocalOperation",
     "Precedence": 3
   },
-  {
+  "cube": {
     "Operator": "cube",
     "OperationClass": "CubeOperation",
     "Precedence": 3
   },
-  {
+  "sq": {
     "Operator": "sq",
     "OperationClass": "SquareOperation",
     "Precedence": 3
   },
-  {
+  "sqrt": {
     "Operator": "sqrt",
     "OperationClass": "SqrtOperation",
     "Precedence": 3
   },
-  {
+  "neg": {
     "Operator": "neg",
     "OperationClass": "NegationOperation",
     "Precedence": 3
   },
-  {
+  "%": {
     "Operator": "%",
     "OperationClass": "PercentageOperation",
     "Precedence": 3
   },
-  {
+  "sin": {
     "Operator": "sin",
     "OperationClass": "SineOperation",
     "Precedence": 3
   },
-  {
+  "cos": {
     "Operator": "cos",
     "OperationClass": "CosineOperation",
     "Precedence": 3
