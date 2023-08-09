@@ -52,6 +52,7 @@
     <Compile Include="TestExpressionEvaluation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBinaryOperations.cs" />
+    <Compile Include="TestHelperClass.cs" />
     <Compile Include="TestUnaryOperations.cs" />
   </ItemGroup>
   <ItemGroup>
