@@ -2,7 +2,7 @@
 
 namespace MathLibrary
 {
-    public class Tokenization : OperationMapping
+    public class Tokenization : OperatorUtility
     {
         
 

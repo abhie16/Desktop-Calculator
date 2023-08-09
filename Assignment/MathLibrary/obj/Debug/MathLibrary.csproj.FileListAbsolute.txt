@@ -31,6 +31,6 @@ C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\bi
 C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\bin\Debug\System.ValueTuple.xml
 C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\obj\Debug\MathLibrary.csproj.CopyComplete
-C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\bin\Debug\OperatorConfigFile.json
 C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\bin\Debug\Newtonsoft.Json.dll
 C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\bin\Debug\OperatorConfigFile.json

@@ -85,7 +85,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MessageResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Evaluation\OperationMapping.cs" />
+    <Compile Include="Evaluation\OperatorUtility.cs" />
+    <Compile Include="Evaluation\OperatorInfo.cs" />
     <Compile Include="UnaryOperation\ExponentialOperations\ReciprocalOperation.cs" />
     <Compile Include="UnaryOperation\ExponentialOperations\CubeOperation.cs" />
     <Compile Include="UnaryOperation\ExponentialOperations\SquareOperation.cs" />

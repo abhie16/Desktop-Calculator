@@ -70,7 +70,7 @@ namespace MathLibrary {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\OperatorConfigFile.json.
+        ///   Looks up a localized string similar to OperatorConfigFile.json.
         /// </summary>
         internal static string ConfigFilePath {
             get {
@@ -120,6 +120,15 @@ namespace MathLibrary {
         internal static string InvalidPostfixExpression {
             get {
                 return ResourceManager.GetString("InvalidPostfixExpression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Operator Not Found.
+        /// </summary>
+        internal static string OperatorNotFind {
+            get {
+                return ResourceManager.GetString("OperatorNotFind", resourceCulture);
             }
         }
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MathLibrary
 {
-    public class PostfixConversion : OperationMapping
+    public class PostfixConversion : OperatorUtility
     {
         public static string InfixToPostfixExpression(string[] infixExpression)
         {

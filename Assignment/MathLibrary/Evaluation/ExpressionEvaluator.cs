@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace MathLibrary
 {
-    public class ExpressionEvaluator : OperationMapping
+    public class ExpressionEvaluator : OperatorUtility
     {
-        
         public double Evaluate(string expression) {
+
             Stack<double> operandStack = new Stack<double>();
 
             string postfixExpression = PostfixConversion.InfixToPostfixExpression(Tokenization.ConvertToTokens(expression));
@@ -22,39 +23,20 @@ namespace MathLibrary
                 }
                 else if(IsOperator(token))
                 {
-                    if(OperatorToBinaryClassMap.TryGetValue(token, out Type binaryClassOperation))
-                    {
-                        if(operandStack.Count < 2)
+                    
+                        Type operationType =  Type.GetType(OperatorInfoDictionary[token].OperationClass);
+                        IOperation operationObject = Activator.CreateInstance(operationType) as IOperation;
+
+                        double[] operands = new double[operationObject.OperandCount];
+
+                        for (int index = 0; index < operands.Length; index++)
                         {
-                            throw new ExpressionException(MessageResource.InvalidExpression);
+                            operands[index] = operandStack.Pop();
                         }
 
-                         double binaryOperand1 = operandStack.Pop();
-                         double binaryOperand2 = operandStack.Pop();
-
-                         var binaryOperation = Activator.CreateInstance(binaryClassOperation) as IOperation;
-                         double result = binaryOperation.Evaluate(new double[] {binaryOperand1, binaryOperand2});
-
-                         operandStack.Push(result);
-                    }
-                    else if (OperatorToUnaryClassMap.TryGetValue(token, out Type unaryClassOperation))
-                    {
-                        if (operandStack.Count < 1)
-                        {
-                            throw new ExpressionException(MessageResource.InvalidExpression);
-                        }
-
-                        double unaryOperand = operandStack.Pop();
-
-                        var unaryOperation = Activator.CreateInstance(unaryClassOperation) as IOperation;
-                        double result = unaryOperation.Evaluate(new double[] {unaryOperand});
-
+                        double result = operationObject.Evaluate(operands);
                         operandStack.Push(result);
-                    }
-                    else
-                    {
-                        throw new ExpressionException(MessageResource.InvalidPostfixExpression);
-                    }
+                    
                 }
                 else
                 {

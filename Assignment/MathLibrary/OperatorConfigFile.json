@@ -1,67 +1,67 @@
 {
   "+": {
     "Operator": "+",
-    "OperationClass": "AdditionOperation",
+    "OperationClass": "MathLibrary.AdditionOperation",
     "Precedence": 1
   },
   "-": {
     "Operator": "-",
-    "OperationClass": "SubtractionOperation",
+    "OperationClass": "MathLibrary.SubtractionOperation",
     "Precedence": 1
   },
   "*": {
     "Operator": "*",
-    "OperationClass": "MultiplicationOperation",
+    "OperationClass": "MathLibrary.MultiplicationOperation",
     "Precedence": 2
   },
   "/": {
     "Operator": "/",
-    "OperationClass": "DivisionOperation",
+    "OperationClass": "MathLibrary.DivisionOperation",
     "Precedence": 2
   },
   "log": {
     "Operator": "log",
-    "OperationClass": "LogarithmicOperation",
+    "OperationClass": "MathLibrary.LogarithmicOperation",
     "Precedence": 3
   },
   "reci": {
     "Operator": "reci",
-    "OperationClass": "ReciprocalOperation",
+    "OperationClass": "MathLibrary.ReciprocalOperation",
     "Precedence": 3
   },
   "cube": {
     "Operator": "cube",
-    "OperationClass": "CubeOperation",
+    "OperationClass": "MathLibrary.CubeOperation",
     "Precedence": 3
   },
   "sq": {
     "Operator": "sq",
-    "OperationClass": "SquareOperation",
+    "OperationClass": "MathLibrary.SquareOperation",
     "Precedence": 3
   },
   "sqrt": {
     "Operator": "sqrt",
-    "OperationClass": "SqrtOperation",
+    "OperationClass": "MathLibrary.SqrtOperation",
     "Precedence": 3
   },
   "neg": {
     "Operator": "neg",
-    "OperationClass": "NegationOperation",
+    "OperationClass": "MathLibrary.NegationOperation",
     "Precedence": 3
   },
   "%": {
     "Operator": "%",
-    "OperationClass": "PercentageOperation",
+    "OperationClass": "MathLibrary.PercentageOperation",
     "Precedence": 3
   },
   "sin": {
     "Operator": "sin",
-    "OperationClass": "SineOperation",
+    "OperationClass": "MathLibrary.SineOperation",
     "Precedence": 3
   },
   "cos": {
     "Operator": "cos",
-    "OperationClass": "CosineOperation",
+    "OperationClass": "MathLibrary.CosineOperation",
     "Precedence": 3
   }
 }

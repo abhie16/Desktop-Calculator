@@ -121,7 +121,7 @@
     <value>Invalid Number of Arguments</value>
   </data>
   <data name="ConfigFilePath" xml:space="preserve">
-    <value>C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\MathLibrary\OperatorConfigFile.json</value>
+    <value>OperatorConfigFile.json</value>
   </data>
   <data name="DividedByZero" xml:space="preserve">
     <value>Divider should be non-zero</value>
@@ -137,5 +137,8 @@
   </data>
   <data name="InvalidPostfixExpression" xml:space="preserve">
     <value>Invalid Postfix Expression</value>
+  </data>
+  <data name="OperatorNotFind" xml:space="preserve">
+    <value>Operator Not Found</value>
   </data>
 </root>
