@@ -3,7 +3,7 @@
 namespace MathLibraryTest
 {
     [TestClass]
-    public class TestBinaryOperations : TestHelperClass
+    public class TestBinaryOperations : TestHelper
     {
 
         [TestMethod]
