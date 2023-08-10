@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MathLibraryTest
 {
-    public class TestHelperClass
+    public class TestHelper
     {
         public void TestHelperArrayParam(string[] expressions, double[] expectedResults)
         {
@@ -18,7 +18,7 @@ namespace MathLibraryTest
             }
         }
 
-        public void TestHelper(string expression, double expectedResult)
+        public void TestHelperConstParam(string expression, double expectedResult)
         {
             ExpressionEvaluator evaluator = new ExpressionEvaluator();
 

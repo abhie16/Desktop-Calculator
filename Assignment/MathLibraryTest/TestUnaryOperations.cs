@@ -1,12 +1,10 @@
-﻿using MathLibrary;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Linq.Expressions;
 
 namespace MathLibraryTest
 {
     [TestClass]
-    public class TestUnaryOperations : TestHelperClass
+    public class TestUnaryOperations : TestHelper
     {
 
         [TestMethod]
@@ -20,7 +18,7 @@ namespace MathLibraryTest
         [DataRow("neg(25)", -25)]
         public void TestNegation(string expression, double expectedResult)
         {
-            TestHelper(expression, expectedResult);
+            TestHelperConstParam(expression, expectedResult);
         }
 
         [TestMethod]
@@ -34,7 +32,7 @@ namespace MathLibraryTest
         [DataRow("cube(3)", 27)]
         public void TestCube(string expression, double expectedResult)
         {
-            TestHelper(expression, expectedResult);
+            TestHelperConstParam(expression, expectedResult);
         }
 
         [TestMethod]
@@ -63,7 +61,7 @@ namespace MathLibraryTest
         public void TestSine(string expression, double angle)
         {
             double expectedResult = Math.Sin((3.14 / 180) * angle);
-            TestHelper(expression, expectedResult);
+            TestHelperConstParam(expression, expectedResult);
         }
 
         [TestMethod]
@@ -71,7 +69,7 @@ namespace MathLibraryTest
         public void TestCosine(string expression, double angle)
         {
             double expectedResult = Math.Cos((3.14 / 180) * angle);
-            TestHelper(expression, expectedResult);
+            TestHelperConstParam(expression, expectedResult);
         }
     }
 }
