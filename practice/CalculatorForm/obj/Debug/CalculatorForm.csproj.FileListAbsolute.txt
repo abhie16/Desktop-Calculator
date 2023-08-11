@@ -1,0 +1,16 @@
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\bin\Debug\CalculatorForm.exe.config
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\bin\Debug\CalculatorForm.exe
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\bin\Debug\CalculatorForm.pdb
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\obj\Debug\CalculatorForm.csproj.AssemblyReference.cache
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\obj\Debug\CalculatorForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\obj\Debug\CalculatorForm.Properties.Resources.resources
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\obj\Debug\CalculatorForm.csproj.GenerateResource.cache
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\obj\Debug\CalculatorForm.csproj.CoreCompileInputs.cache
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\obj\Debug\CalculatorForm.exe
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\obj\Debug\CalculatorForm.pdb
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\bin\Debug\OperatorConfigFile.json
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\bin\Debug\MathLibrary.dll
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\bin\Debug\Newtonsoft.Json.dll
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\bin\Debug\MathLibrary.pdb
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\bin\Debug\Newtonsoft.Json.xml
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\practice\CalculatorForm\obj\Debug\CalculatorForm.csproj.CopyComplete

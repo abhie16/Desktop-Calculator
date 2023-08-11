@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 
 namespace MathLibrary
 {
@@ -31,6 +30,10 @@ namespace MathLibrary
 
                         for (int index = 0; index < operands.Length; index++)
                         {
+                            if(operandStack.Count == 0) {
+                                throw new ExpressionException(MessageResource.InvalidInput);
+                            }
+
                             operands[index] = operandStack.Pop();
                         }
 
