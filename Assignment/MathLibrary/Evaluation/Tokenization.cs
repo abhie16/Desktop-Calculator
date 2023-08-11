@@ -8,7 +8,6 @@ namespace MathLibrary
 
         public static string[] ConvertToTokens(string expression)
         {
-            bool decimalFlag = true;
 
             if (expression == null) return null;
                 
@@ -22,14 +21,6 @@ namespace MathLibrary
                 {
                     while (index < expression.Length && ((expression[index] <= '9' && expression[index] >= '0') || expression[index] == '.'))
                     {
-                        if(expression[index] == '.' && decimalFlag == false)
-                        {
-                            throw new ExpressionException(MessageResource.InvalidDecimal);
-                        }
-                        if (expression[index] == '.')
-                        {
-                            decimalFlag = false;
-                        }
                         token += expression[index]+"";
                         index++;
                     }

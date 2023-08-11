@@ -24,6 +24,7 @@ namespace CalculatorForm
 
             _displayTextBox = new TextBox();
             _displayTextBox.Text = "0";
+            _displayTextBox.Font = new System.Drawing.Font(_displayTextBox.Font.FontFamily ,20);
             _displayTextBox.Dock = DockStyle.Fill;
             _displayTextBox.SelectionStart = 0;
             _displayTextBox.SelectionLength = 1;
@@ -32,10 +33,11 @@ namespace CalculatorForm
             _displayTextBox.BorderStyle = BorderStyle.None;
 
             _tableLayoutPanel = new TableLayoutPanel();
+            _tableLayoutPanel.AutoSize = true;
             _tableLayoutPanel.Dock = DockStyle.Fill;
             _tableLayoutPanel.RowCount = int.Parse(Resources.TableRow);
             _tableLayoutPanel.ColumnCount = int.Parse(Resources.TableColumn);
-            _tableLayoutPanel.Padding = new Padding(20,20, 20, 20);    
+            _tableLayoutPanel.Padding = new Padding(20,40, 20, 20);    
 
             string[] buttonLabels =
             {
@@ -74,16 +76,16 @@ namespace CalculatorForm
             Button button = (Button)sender;
 
             string buttonText = button.Text;
-            if(_displayTextBox.Text == "0")
+            if(_displayTextBox.Text == "0" && buttonText != "." && buttonText != "C" && buttonText != "CE" && buttonText != "Del")
             {
                 _displayTextBox.Text = buttonText;
             }
-            else if(button.Text == "=") {
+            else if(buttonText == "=") {
                 Calculate();
             }
-            else if(button.Text == "." && _displayTextBox.Text == "0")
+            else if(buttonText == "." && !IsNum(_displayTextBox.Text) && !IsNum(_displayTextBox.Text.Substring(_displayTextBox.Text.Length -2)))
             {
-                _displayTextBox.Text = "0" + buttonText;
+                _displayTextBox.Text += "0" + buttonText;
             }
             else if(button.Text == "C" || button.Text == "CE")
             {
@@ -94,6 +96,10 @@ namespace CalculatorForm
                 if(_displayTextBox.Text.Length > 0)
                 {
                     _displayTextBox.Text = _displayTextBox.Text.Remove(_displayTextBox.Text.Length-1);
+                }
+                else
+                {
+                    _displayTextBox.Text = "0";
                 }
             }
             else
@@ -114,6 +120,15 @@ namespace CalculatorForm
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private bool IsNum(string text)
+        {
+            if(double.TryParse(text, out double result))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
