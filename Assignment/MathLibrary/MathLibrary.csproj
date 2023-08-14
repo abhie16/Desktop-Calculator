@@ -76,10 +76,10 @@
     <Compile Include="BinaryOperation\AdditionOperation.cs" />
     <Compile Include="BinaryOperation\BinaryOperation.cs" />
     <Compile Include="BinaryOperation\DivisionOperation.cs" />
-    <Compile Include="Evaluation\Tokenization.cs" />
-    <Compile Include="Evaluation\PostfixConversion.cs" />
+    <Compile Include="Evaluation\Tokenizer.cs" />
+    <Compile Include="Evaluation\PostfixConvertor.cs" />
     <Compile Include="ExpressionException.cs" />
-    <Compile Include="MemoryUtility.cs" />
+    <Compile Include="MemoryOperations.cs" />
     <Compile Include="MessageResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace MathLibrary
 {
-    public class PostfixConversion : OperatorUtility
+    public class PostfixConvertor
     {
-        public static string InfixToPostfixExpression(string[] infixExpression)
+        public static string InfixToPostfixConvertor(string[] infixExpression)
         {
 
             List<string> postfixExpressionList = new List<string>();
@@ -13,7 +13,7 @@ namespace MathLibrary
 
             Stack<string> operatorStack = new Stack<string>();
 
-            for (int i = 0; i < infixExpression.Length; ++i)
+            for (int i = 0; i < infixExpression.Length; i++)
             {
                 string token = infixExpression[i];
 
@@ -49,7 +49,7 @@ namespace MathLibrary
                 else
                 {
                     while (operatorStack.Count > 0
-                           && OperatorPrecedence(token) <= OperatorPrecedence(operatorStack.Peek()))
+                           && OperatorUtility.OperatorPrecedence(token) <= OperatorUtility.OperatorPrecedence(operatorStack.Peek()))
                     {
                         postfixExpressionList.Add(operatorStack.Pop());
                     }

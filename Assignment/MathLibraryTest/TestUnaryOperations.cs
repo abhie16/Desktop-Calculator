@@ -23,7 +23,7 @@ namespace MathLibraryTest
 
         [TestMethod]
         [DataRow(new string[] {"log(10)", "log(log(10))"}, new double[] {1, 0})]
-        public void TestLogarithmic(string[] expressions, double[] expectedResults)
+        public void TestLogarithm(string[] expressions, double[] expectedResults)
         {
             TestHelperArrayParam(expressions, expectedResults);
         }

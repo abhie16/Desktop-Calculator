@@ -49,7 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestExpressionEvaluation.cs" />
+    <Compile Include="TestExpressionEvaluator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBinaryOperations.cs" />
     <Compile Include="TestHelper.cs" />

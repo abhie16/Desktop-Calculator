@@ -30,3 +30,4 @@ C:\Users\Acer\Desktop\task\abhishek-pandey\Assignment\CalculatorApp\obj\Debug\Ca
 C:\Users\Acer\Desktop\task\abhishek-pandey\Assignment\CalculatorApp\obj\Debug\CalculatorApp.exe
 C:\Users\Acer\Desktop\task\abhishek-pandey\Assignment\CalculatorApp\obj\Debug\CalculatorApp.pdb
 C:\Users\Acer\Desktop\task\abhishek-pandey\Assignment\CalculatorApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\CalculatorApp\obj\Debug\CalculatorApp.CalculatorForm.resources

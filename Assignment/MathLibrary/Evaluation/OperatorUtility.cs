@@ -7,17 +7,15 @@ namespace MathLibrary
 {
     public class OperatorUtility
     {
-
         public static Dictionary<string, OperatorInfo>  OperatorInfoDictionary = new Dictionary<string, OperatorInfo>();
-        public static void OperatorInfoMapping()
-        {
-            string jsonText = File.ReadAllText(@MessageResource.ConfigFilePath);
-            OperatorInfoDictionary = JsonConvert.DeserializeObject<Dictionary<string, OperatorInfo>>(jsonText);
-        }
+        static OperatorUtility() {
+			string jsonText = File.ReadAllText(@MessageResource.ConfigFilePath);
+			OperatorInfoDictionary = JsonConvert.DeserializeObject<Dictionary<string, OperatorInfo>>(jsonText);
+		}
+        
 
         public static bool IsOperator(string operatorSign)
         {
-            OperatorInfoMapping();
             return OperatorInfoDictionary.ContainsKey(operatorSign);
         }
 

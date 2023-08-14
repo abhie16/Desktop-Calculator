@@ -1,0 +1,254 @@
+[
+  {
+    "text": "MC",
+    "value": "MC",
+    "row": 1,
+    "column": 0,
+    "mode": "simple"
+  },
+  {
+    "text": "M+",
+    "value": "M+",
+    "row": 1,
+    "column": 1,
+    "mode": "simple"
+  },
+  {
+    "text": "M-",
+    "value": "M-",
+    "row": 1,
+    "column": 2,
+    "mode": "simple"
+  },
+  {
+    "text": "MS",
+    "value": "MS",
+    "row": 1,
+    "column": 3,
+    "mode": "simple"
+  },
+  {
+    "text": "MR",
+    "value": "MR",
+    "row": 1,
+    "column": 4,
+    "mode": "simple"
+  },
+
+  {
+    "text": "7",
+    "value": "7",
+    "row": 2,
+    "column": 0,
+    "mode": "simple"
+  },
+  {
+    "text": "8",
+    "value": "8",
+    "row": 2,
+    "column": 1,
+    "mode": "simple"
+  },
+  {
+    "text": "9",
+    "value": "9",
+    "row": 2,
+    "column": 2,
+    "mode": "simple"
+  },
+  {
+    "text": "/",
+    "value": "/",
+    "row": 2,
+    "column": 3,
+    "mode": "simple"
+  },
+  {
+    "text": "%",
+    "value": "%",
+    "row": 2,
+    "column": 4,
+    "mode": "simple"
+  },
+
+  {
+    "text": "4",
+    "value": "4",
+    "row": 3,
+    "column": 0,
+    "mode": "simple"
+  },
+  {
+    "text": "5",
+    "value": "5",
+    "row": 3,
+    "column": 1,
+    "mode": "simple"
+  },
+  {
+    "text": "6",
+    "value": "6",
+    "row": 3,
+    "column": 2,
+    "mode": "simple"
+  },
+  {
+    "text": "x",
+    "value": "*",
+    "row": 3,
+    "column": 3,
+    "mode": "simple"
+  },
+  {
+    "text": "Del",
+    "value": "Del",
+    "row": 3,
+    "column": 4,
+    "mode": "simple"
+  },
+
+  {
+    "text": "1",
+    "value": "1",
+    "row": 4,
+    "column": 0,
+    "mode": "simple"
+  },
+  {
+    "text": "2",
+    "value": "2",
+    "row": 4,
+    "column": 1,
+    "mode": "simple"
+  },
+  {
+    "text": "3",
+    "value": "3",
+    "row": 4,
+    "column": 2,
+    "mode": "simple"
+  },
+  {
+    "text": "-",
+    "value": "-",
+    "row": 4,
+    "column": 3,
+    "mode": "simple"
+  },
+  {
+    "text": "CE",
+    "value": "CE",
+    "row": 4,
+    "column": 4,
+    "mode": "simple"
+  },
+
+  {
+    "text": "0",
+    "value": "0",
+    "row": 5,
+    "column": 0,
+    "mode": "simple"
+  },
+  {
+    "text": ".",
+    "value": ".",
+    "row": 5,
+    "column": 1,
+    "mode": "simple"
+  },
+  {
+    "text": "=",
+    "value": "=",
+    "row": 5,
+    "column": 2,
+    "mode": "simple"
+  },
+  {
+    "text": "+",
+    "value": "+",
+    "row": 5,
+    "column": 3,
+    "mode": "simple"
+  },
+  {
+    "text": "C",
+    "value": "C",
+    "row": 5,
+    "column": 4,
+    "mode": "simple"
+  },
+  {
+    "text": "sin",
+    "value": "sin",
+    "row": 6,
+    "column": 0,
+    "mode": "scientific"
+  },
+  {
+    "text": "cos",
+    "value": "cos",
+    "row": 6,
+    "column": 1,
+    "mode": "scientific"
+  },
+  {
+    "text": "(",
+    "value": "(",
+    "row": 6,
+    "column": 2,
+    "mode": "scientific"
+  },
+  {
+    "text": ")",
+    "value": ")",
+    "row": 6,
+    "column": 3,
+    "mode": "scientific"
+  },
+
+
+  {
+    "text": "log",
+    "value": "log",
+    "row": 6,
+    "column": 4,
+    "mode": "scientific"
+  },
+
+  {
+    "text": "sqrt",
+    "value": "sqrt",
+    "row": 7,
+    "column": 0,
+    "mode": "scientific"
+  },
+  {
+    "text": "x^2",
+    "value": "sq",
+    "row": 7,
+    "column": 1,
+    "mode": "scientific"
+  },
+  {
+    "text": "x^3",
+    "value": "cube",
+    "row": 7,
+    "column": 2,
+    "mode": "scientific"
+  },
+  {
+    "text": "1/x",
+    "value": "reci",
+    "row": 7,
+    "column": 3,
+    "mode": "scientific"
+  },
+  {
+    "text": "+/-",
+    "value": "neg",
+    "row": 7,
+    "column": 4,
+    "mode": "scientific"
+  }
+]

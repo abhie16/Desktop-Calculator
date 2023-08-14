@@ -2,7 +2,7 @@
 
 namespace MathLibrary
 {
-    public class MemoryUtility
+    public class MemoryOperations
     {
         private double _memoryValue = 0.0;
 

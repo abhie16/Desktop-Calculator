@@ -1,6 +1,4 @@
-﻿
-
-namespace MathLibrary
+﻿namespace MathLibrary
 {
     public class OperatorInfo
     {

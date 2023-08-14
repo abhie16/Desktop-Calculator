@@ -61,6 +61,15 @@ namespace CalculatorApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\CalculatorApp\JsonFiles\ButtonConfigFile.json.
+        /// </summary>
+        internal static string ButtonConfigFile {
+            get {
+                return ResourceManager.GetString("ButtonConfigFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Calculator.
         /// </summary>
         internal static string FormText {
@@ -115,29 +124,11 @@ namespace CalculatorApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\CalculatorApp\JsonFiles\ButtonsScientific.json.
-        /// </summary>
-        internal static string ScientificButtonJsonPath {
-            get {
-                return ResourceManager.GetString("ScientificButtonJsonPath", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Scientific Mode.
         /// </summary>
         internal static string ScientificModeButtonText {
             get {
                 return ResourceManager.GetString("ScientificModeButtonText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\CalculatorApp\JsonFiles\ButtonsSimple.json.
-        /// </summary>
-        internal static string SimpleButtonJsonPath {
-            get {
-                return ResourceManager.GetString("SimpleButtonJsonPath", resourceCulture);
             }
         }
         

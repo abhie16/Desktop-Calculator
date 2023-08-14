@@ -2,10 +2,8 @@
 
 namespace MathLibrary
 {
-    public class Tokenization : OperatorUtility
+    public class Tokenizer
     {
-        
-
         public static string[] ConvertToTokens(string expression)
         {
 
