@@ -4,6 +4,8 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using CalculatorApp.Properties;
+using System.Drawing;
 
 namespace CalculatorApp
 {
@@ -17,28 +19,34 @@ namespace CalculatorApp
         public CalculatorForm()
         {
             InitializeComponent();
-            LoadButtonsFromJson("C:\\Users\\GPCTAdmin\\Desktop\\Abhishek_pandey_intern_iimt\\Assignment\\CalculatorApp\\ButtonsSimple.json");
-        }
+            LoadButtonsFromJson(Resources.SimpleButtonJsonPath);
+		}
 
         private void InitializeComponent()
         {
-            _tableLayout = new ButtonTableLayout();
+            CalculatorFormMenu menuInstance = new CalculatorFormMenu();
+			_tableLayout = new ButtonTableLayout();
             _dispalyTextBox = new DisplayTextbox();
 
+            
+
             this.Dock = DockStyle.Fill;
-            this.Name = "CalculatorForm";
-            this.Text = "Calculator";
+            this.Text = Resources.FormText;
             this.Padding = new Padding(20);
             this.AutoSize = true;
 
             _toggleBtn = new Button();
-            _toggleBtn.Text = "ScientificMode";
+            _toggleBtn.Font = new Font(_toggleBtn.Font.FontFamily, 10);
+            _toggleBtn.AutoSize = true;
+            _toggleBtn.BringToFront();
+            _toggleBtn.Text = Resources.ScientificModeButtonText;
 
-            _toggleBtn.Click += ToggleModeButton_Click;
+            _toggleBtn.Click += ToggleModeButtonClick;
 
             this.Controls.Add(_dispalyTextBox);
             this.Controls.Add(_toggleBtn);
             this.Controls.Add(_tableLayout);
+            this.Menu = menuInstance.menu;
 
         }
 
@@ -54,7 +62,7 @@ namespace CalculatorApp
                 {
                     CustomButton button = new CustomButton();
                     button.Text = buttonInfo.Text;
-                    button.Click += Button_Click;
+                    button.Click += ButtonClick;
 
                     button.Margin = new Padding(5);
 
@@ -64,13 +72,13 @@ namespace CalculatorApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading buttons: {ex.Message}");
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void Button_Click(object sender, EventArgs e)
+        private void ButtonClick(object sender, EventArgs e)
         {
-            Button button = (Button)sender;
+			Button button = (Button)sender;
 
             string buttonText = _buttonDict[button];
             if (_dispalyTextBox.Text == "0")
@@ -104,6 +112,10 @@ namespace CalculatorApp
                 {
                     _dispalyTextBox.Text = _dispalyTextBox.Text.Remove(_dispalyTextBox.Text.Length - 1);
                 }
+                else
+                {
+                    _dispalyTextBox.Text = "0";
+				}
             }
             else
             {
@@ -111,17 +123,17 @@ namespace CalculatorApp
             }
         }
 
-        private void ToggleModeButton_Click(object sender, EventArgs e)
+        private void ToggleModeButtonClick(object sender, EventArgs e)
         {
             _isScientificMode = !_isScientificMode;
 
             if (!_isScientificMode)
             {
-                _toggleBtn.Text = "ScientificMode";
+                _toggleBtn.Text = Resources.ScientificModeButtonText;
             }
             else if (_isScientificMode)
             {
-                _toggleBtn.Text = "SimpleMode";
+                _toggleBtn.Text = Resources.SimpleModeButtonText;
             }
 
             _tableLayout.Controls.Clear();
@@ -129,12 +141,14 @@ namespace CalculatorApp
 
             if (_isScientificMode)
             {
-                LoadButtonsFromJson("C:\\Users\\GPCTAdmin\\Desktop\\Abhishek_pandey_intern_iimt\\Assignment\\CalculatorApp\\ButtonsScientific.json");
+                LoadButtonsFromJson(Resources.ScientificButtonJsonPath);
             }
             else
             {
-                LoadButtonsFromJson("C:\\Users\\GPCTAdmin\\Desktop\\Abhishek_pandey_intern_iimt\\Assignment\\CalculatorApp\\ButtonsSimple.json");
+                LoadButtonsFromJson(Resources.SimpleButtonJsonPath);
             }
         }
+
+
     }
 }

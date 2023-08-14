@@ -1,19 +1,21 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace CalculatorApp
 {
-    public class DisplayTextBox : TextBox
+    public class DisplayTextbox : TextBox
     {
-        public DisplayTextBox()
+        public DisplayTextbox()
         {
             this.Text = "0";
             this.Dock = DockStyle.Fill;
-            this.ReadOnly = true;
             this.SelectionStart = 0;
             this.SelectionLength = 1;
-            this.TextAlign = HorizontalAlignment.Right;
+            this.MaximumSize = new Size(1000, 50);
+            this.ReadOnly = true;
             this.BorderStyle = BorderStyle.None;
-            this.Padding = new Padding(10,10, 10, 10);
+            this.Font = new Font(this.Font.FontFamily, 26);
+            this.TextAlign = HorizontalAlignment.Right;
         }
     }
 }
