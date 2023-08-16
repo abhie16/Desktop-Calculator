@@ -61,11 +61,20 @@ namespace CalculatorApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\CalculatorApp\JsonFiles\ButtonConfigFile.json.
+        ///   Looks up a localized string similar to C:\Users\Acer\Desktop\task\abhishek-pandey\Assignment\CalculatorApp\ConfigFile\ButtonConfigFile.json.
         /// </summary>
         internal static string ButtonConfigFile {
             get {
                 return ResourceManager.GetString("ButtonConfigFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Expression.
+        /// </summary>
+        internal static string DialogBoxMessage {
+            get {
+                return ResourceManager.GetString("DialogBoxMessage", resourceCulture);
             }
         }
         

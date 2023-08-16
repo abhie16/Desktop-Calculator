@@ -118,7 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ButtonConfigFile" xml:space="preserve">
-    <value>C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\CalculatorApp\JsonFiles\ButtonConfigFile.json</value>
+    <value>C:\Users\Acer\Desktop\task\abhishek-pandey\Assignment\CalculatorApp\ConfigFile\ButtonConfigFile.json</value>
+  </data>
+  <data name="DialogBoxMessage" xml:space="preserve">
+    <value>Invalid Expression</value>
   </data>
   <data name="FormText" xml:space="preserve">
     <value>Calculator</value>
