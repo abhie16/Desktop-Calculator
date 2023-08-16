@@ -80,8 +80,9 @@ namespace CalculatorApp
 			MainMenu menu = new MainMenu();
 
 			MenuItem edit = menu.MenuItems.Add(Resources.MenuItemEdit);
-			edit.MenuItems.Add(new MenuItem(Resources.MenuSubitemCopy));
-			edit.MenuItems.Add(new MenuItem(Resources.MenuSubitemPaste));
+			edit.MenuItems.Add(new MenuItem(Resources.MenuSubitemCopy, new EventHandler(this.CopyOnClick)));
+			edit.MenuItems.Add(new MenuItem(Resources.MenuSubitemPaste, new EventHandler(this.PasteOnClick)));
+
 
 			MenuItem exit = menu.MenuItems.Add(Resources.MenuItemExit, new EventHandler(this.FormCloseOnClick));
 			MenuItem help = menu.MenuItems.Add(Resources.MenuItemHelp, new EventHandler(this.HelpOnClick));
@@ -103,6 +104,16 @@ namespace CalculatorApp
 		private void HelpOnClick(object sender, EventArgs e)
 		{
 			MessageBox.Show(Resources.HelpText);
+		}
+
+		private void CopyOnClick(object sender, EventArgs e)
+		{
+			Clipboard.SetText(_displayTextBox.Text);
+		}
+
+		private void PasteOnClick(object sender, EventArgs e)
+		{
+			_displayTextBox.Text = Clipboard.GetText();
 		}
 
 		private void LoadButtonsFromJson()
