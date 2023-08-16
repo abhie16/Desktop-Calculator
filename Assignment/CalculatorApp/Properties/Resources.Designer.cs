@@ -61,7 +61,7 @@ namespace CalculatorApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\Acer\Desktop\task\abhishek-pandey\Assignment\CalculatorApp\ConfigFile\ButtonConfigFile.json.
+        ///   Looks up a localized string similar to C:\Users\GPCTAdmin\Desktop\Abhishek_pandey_intern_iimt\Assignment\CalculatorApp\ConfigFile\ButtonConfigFile.json.
         /// </summary>
         internal static string ButtonConfigFile {
             get {

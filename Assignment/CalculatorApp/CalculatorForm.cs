@@ -136,14 +136,14 @@ namespace CalculatorApp
 			Button button = (Button)sender;
 			string buttonText = _buttonDict[button];
 
-			if(buttonText == "MC" || buttonText == "M+" || buttonText == "M-" || buttonText == "MS" || buttonText == "MR")
-			{
-				CalculatorMemory(buttonText);
-			}
 			if (_displayTextBox.Text == "0")
 			{
 				_isOperatorAllowed = true;
                 _displayTextBox.Text = buttonText;
+			}
+			else if(buttonText == "MC" || buttonText == "M+" || buttonText == "M-" || buttonText == "MS" || buttonText == "MR")
+			{
+				CalculatorMemory(buttonText);
 			}
 			else if (button.Text == "=")
 			{
@@ -176,6 +176,10 @@ namespace CalculatorApp
                 _displayTextBox.Text += buttonText;
                 _isOperatorAllowed = !IsOperator(buttonText);
             }
+			else if (!IsOperator(buttonText))
+			{
+				_displayTextBox.Text += buttonText;
+			}
         }
 
         private bool IsNumeric(string text)
