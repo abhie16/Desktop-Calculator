@@ -48,6 +48,7 @@ namespace CalculatorApp
 			this.Text = Resources.FormText;
 			this.Padding = new Padding(30);
 			this.AutoSize = true;
+			this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
 
 			// toggle button
