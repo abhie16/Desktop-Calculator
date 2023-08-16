@@ -17,19 +17,21 @@ namespace CalculatorApp
 	public class CalculatorForm : Form
 	{
 		private Dictionary<Button, string> _buttonDict = new Dictionary<Button, string>();
-		ExpressionEvaluator evaluator;
+		public ExpressionEvaluator Evaluator;
+		public MemoryOperations MemoryOperation;
 		private TableLayoutPanel _tableLayout;
 		private TextBox _displayTextBox;
 		private bool _isScientificMode = false;
         private bool _isOperatorAllowed = true;
         private Button _toggleBtn;
-		List<ButtonInfo> buttonInfoList;
+		public List<ButtonInfo> ButtonInfoList;
 		public CalculatorForm()
 		{
-			evaluator = new ExpressionEvaluator();
+			Evaluator = new ExpressionEvaluator();
+			MemoryOperation = new MemoryOperations();
 
 			string json = File.ReadAllText(Resources.ButtonConfigFile);
-			buttonInfoList = JsonConvert.DeserializeObject<List<ButtonInfo>>(json);
+			ButtonInfoList = JsonConvert.DeserializeObject<List<ButtonInfo>>(json);
 
 			InitializeComponent();
 			LoadButtonsFromJson();
@@ -98,7 +100,7 @@ namespace CalculatorApp
 			try
 			{
                 _tableLayout.Controls.Clear();
-                foreach (var buttonInfo in buttonInfoList)
+                foreach (var buttonInfo in ButtonInfoList)
 				{
 					Button button = new Button();
 					button.Width = 50;
@@ -133,6 +135,11 @@ namespace CalculatorApp
 		{
 			Button button = (Button)sender;
 			string buttonText = _buttonDict[button];
+
+			if(buttonText == "MC" || buttonText == "M+" || buttonText == "M-" || buttonText == "MS" || buttonText == "MR")
+			{
+				CalculatorMemory(buttonText);
+			}
 			if (_displayTextBox.Text == "0")
 			{
 				_isOperatorAllowed = true;
@@ -181,11 +188,46 @@ namespace CalculatorApp
 			return text == "+" || text == "-" || text == "*" || text == "/" || text == "%" || text == ".";
         }
 
+		private void CalculatorMemory(string text)
+		{
+			if(text == "MS")
+			{
+				if (IsNumeric(_displayTextBox.Text))
+				{
+					MemoryOperation.SaveToMemory(_displayTextBox.Text);
+					_displayTextBox.Text = "0";
+				}
+			}
+			else if(text == "MR")
+			{
+				_displayTextBox.Text = MemoryOperation.GetMemoryValue().ToString();
+			}
+			else if(text == "M+")
+			{
+                if (IsNumeric(_displayTextBox.Text))
+                {
+                    _displayTextBox.Text = MemoryOperation.AddToMemory().ToString();
+                }
+            }
+            else if (text == "M-")
+            {
+                if (IsNumeric(_displayTextBox.Text))
+                {
+                    _displayTextBox.Text = MemoryOperation.SubtractFromMemory().ToString();
+                }
+            }
+            else if (text == "MC")
+            {
+				MemoryOperation.ClearMemory();
+				_displayTextBox.Text = "0";
+            }
+        }
+
         private void CalculateExpression()
 		{
             try
             {
-                double result = evaluator.Evaluate(_displayTextBox.Text);
+                double result = Evaluator.Evaluate(_displayTextBox.Text);
                 _displayTextBox.Text = result.ToString();
             }
             catch

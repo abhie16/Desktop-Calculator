@@ -11,14 +11,16 @@ namespace MathLibrary
             Double.TryParse(result, out _memoryValue);
         }
 
-        public void AddToMemory(double value)
+        public double AddToMemory()
         {
-            _memoryValue += value;
+            _memoryValue += _memoryValue;
+            return _memoryValue;
         }
 
-        public void SubtractFromMemory(double value)
+        public double SubtractFromMemory()
         {
-            _memoryValue -= value;
+            _memoryValue -= _memoryValue;
+            return _memoryValue;
         }
 
         public void ClearMemory()
