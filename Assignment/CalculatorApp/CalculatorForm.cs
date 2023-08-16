@@ -83,8 +83,8 @@ namespace CalculatorApp
 			edit.MenuItems.Add(new MenuItem(Resources.MenuSubitemCopy));
 			edit.MenuItems.Add(new MenuItem(Resources.MenuSubitemPaste));
 
-			MenuItem exit = menu.MenuItems.Add(Resources.MenuItemExit);
-			MenuItem help = menu.MenuItems.Add(Resources.MenuItemHelp);
+			MenuItem exit = menu.MenuItems.Add(Resources.MenuItemExit, new EventHandler(this.FormCloseOnClick));
+			MenuItem help = menu.MenuItems.Add(Resources.MenuItemHelp, new EventHandler(this.HelpOnClick));
 
 
 			// adding to form controls
@@ -93,6 +93,16 @@ namespace CalculatorApp
 			this.Controls.Add(_tableLayout);
 			this.Menu = menu;
 
+		}
+
+		private void FormCloseOnClick(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void HelpOnClick(object sender, EventArgs e)
+		{
+			MessageBox.Show(Resources.HelpText);
 		}
 
 		private void LoadButtonsFromJson()

@@ -88,6 +88,15 @@ namespace CalculatorApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This is a help text..
+        /// </summary>
+        internal static string HelpText {
+            get {
+                return ResourceManager.GetString("HelpText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
         internal static string MenuItemEdit {

@@ -126,6 +126,9 @@
   <data name="FormText" xml:space="preserve">
     <value>Calculator</value>
   </data>
+  <data name="HelpText" xml:space="preserve">
+    <value>This is a help text.</value>
+  </data>
   <data name="MenuItemEdit" xml:space="preserve">
     <value>Edit</value>
   </data>
