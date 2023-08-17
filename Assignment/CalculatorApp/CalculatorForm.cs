@@ -14,7 +14,7 @@ namespace CalculatorApp
 		Simple,
 		Scientific
 	}
-	public class CalculatorForm : Form
+	public partial class CalculatorForm : Form
 	{
 		private Dictionary<Button, string> _buttonDict = new Dictionary<Button, string>();
 		public ExpressionEvaluator Evaluator;
@@ -33,11 +33,11 @@ namespace CalculatorApp
 			string json = File.ReadAllText(Resources.ButtonConfigFile);
 			ButtonInfoList = JsonConvert.DeserializeObject<List<ButtonInfo>>(json);
 
-			InitializeComponent();
+			InitializeUIComponent();
 			LoadButtonsFromJson();
 		}
 
-		private void InitializeComponent()
+		private void InitializeUIComponent()
 		{
 			_tableLayout = new TableLayoutPanel();
 			_displayTextBox = new TextBox();
@@ -69,11 +69,11 @@ namespace CalculatorApp
 			_displayTextBox.SelectionLength = 1;
 			_displayTextBox.ReadOnly = true;
 			_displayTextBox.BorderStyle = BorderStyle.None;
-			_displayTextBox.Font = new Font(_displayTextBox.Font.FontFamily, 26);
+			_displayTextBox.Font = new Font(_displayTextBox.Font.FontFamily, 30);
 			_displayTextBox.TextAlign = HorizontalAlignment.Right;
 
 			// table layout
-			_tableLayout.Padding = new Padding(0, 50, 0, 0);
+			_tableLayout.Padding = new Padding(0, 30, 0, 0);
 			_tableLayout.Dock = DockStyle.Fill;
 			_tableLayout.AutoSize = true;
 
@@ -124,26 +124,50 @@ namespace CalculatorApp
                 _tableLayout.Controls.Clear();
                 foreach (var buttonInfo in ButtonInfoList)
 				{
-					Button button = new Button();
-					button.Width = 50;
-					button.Height = 50;
-					button.Text = buttonInfo.Text;
-					button.Margin = new Padding(5);
-					button.Click += ButtonClick;
+					Button button = new Button
+					{
+						Width = 50,
+						Height = 50,
+						Margin = new Padding(5),
+						Text = buttonInfo.Text,
+						Dock = DockStyle.Fill
+                    };
+
+					if(button.Text == "Del" || button.Text == "CE" || button.Text == "C")
+					{
+						button.Click += ClearButtonClick;
+					}
+                    else if (button.Text == "=")
+                    {
+						button.BackColor = Color.CornflowerBlue;
+						button.Click += CalculateButtonClick;
+                    }
+                    else if (button.Text == "MC" || button.Text == "M+" || button.Text == "M-" || button.Text == "MS" || button.Text == "MR")
+                    {
+						button.Click += MemorySetClick;
+                    }
+                    else
+					{
+                        button.Click += ButtonClick;
+                    }
+					
 					button.KeyPress += ButtonPress;
-					button.Focus();
 
 					
 					if (buttonInfo.Mode == CalculatorModes.Simple && !_tableLayout.Controls.Contains(button))
 					{
 						_tableLayout.Controls.Add(button, buttonInfo.Column, buttonInfo.Row);
 						_buttonDict.Add(button, buttonInfo.Value);
-					}
+                        _tableLayout.RowStyles.Add(new RowStyle(SizeType.Percent,20F));
+                        _tableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+                    }
 					if(buttonInfo.Mode == CalculatorModes.Scientific && _isScientificMode == true && !_tableLayout.Controls.Contains(button))
 					{
 						_tableLayout.Controls.Add(button, buttonInfo.Column, buttonInfo.Row);
 						_buttonDict.Add(button, buttonInfo.Value);
-					}
+                        _tableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+                        _tableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+                    }
 				}
 				
 			}
@@ -152,6 +176,33 @@ namespace CalculatorApp
 				MessageBox.Show(ex.Message);
 			}
 		}
+
+		private void CalculateButtonClick(object sender, EventArgs e)
+		{
+            CalculateExpression();
+        }
+
+		private void ClearButtonClick(object sender, EventArgs e)
+		{
+			Button button = (Button)sender;
+
+            if (button.Text == "C" || button.Text == "CE")
+            {
+                _isOperatorAllowed = true;
+                _displayTextBox.Text = "0";
+            }
+            else if (button.Text == "Del")
+            {
+                if (_displayTextBox.Text.Length > 0)
+                {
+                    _displayTextBox.Text = _displayTextBox.Text.Remove(_displayTextBox.Text.Length - 1);
+                }
+                if (_displayTextBox.Text.Length == 0)
+                {
+                    _displayTextBox.Text = "0";
+                }
+            }
+        }
 
 		private void ButtonClick(object sender, EventArgs e)
 		{
@@ -163,35 +214,11 @@ namespace CalculatorApp
 				_isOperatorAllowed = true;
                 _displayTextBox.Text = buttonText;
 			}
-			else if(buttonText == "MC" || buttonText == "M+" || buttonText == "M-" || buttonText == "MS" || buttonText == "MR")
-			{
-				CalculatorMemory(buttonText);
-			}
-			else if (button.Text == "=")
-			{
-				CalculateExpression();
-
-            }
+			
 			else if (button.Text == "." && _displayTextBox.Text == "0")
 			{
                 _isOperatorAllowed = false;
                 _displayTextBox.Text = "0" + buttonText;
-			}
-			else if (button.Text == "C" || button.Text == "CE")
-			{
-                _isOperatorAllowed = true;
-                _displayTextBox.Text = "0";
-			}
-			else if (button.Text == "Del")
-			{
-				if (_displayTextBox.Text.Length > 0)
-				{
-					_displayTextBox.Text = _displayTextBox.Text.Remove(_displayTextBox.Text.Length - 1);
-				}
-				if(_displayTextBox.Text.Length == 0)
-				{
-					_displayTextBox.Text = "0";
-				}
 			}
             else if (IsNumeric(buttonText) || (IsOperator(buttonText) && _isOperatorAllowed))
             {
@@ -214,9 +241,10 @@ namespace CalculatorApp
 			return text == "+" || text == "-" || text == "*" || text == "/" || text == "%" || text == ".";
         }
 
-		private void CalculatorMemory(string text)
+		private void MemorySetClick(object sender, EventArgs e)
 		{
-			if(text == "MS")
+			Button button = (Button)sender;
+			if(button.Text == "MS")
 			{
 				if (IsNumeric(_displayTextBox.Text))
 				{
@@ -224,25 +252,25 @@ namespace CalculatorApp
 					_displayTextBox.Text = "0";
 				}
 			}
-			else if(text == "MR")
+			else if(button.Text == "MR")
 			{
 				_displayTextBox.Text = MemoryOperation.GetMemoryValue().ToString();
 			}
-			else if(text == "M+")
+			else if(button.Text == "M+")
 			{
                 if (IsNumeric(_displayTextBox.Text))
                 {
                     _displayTextBox.Text = MemoryOperation.AddToMemory().ToString();
                 }
             }
-            else if (text == "M-")
+            else if (button.Text == "M-")
             {
                 if (IsNumeric(_displayTextBox.Text))
                 {
                     _displayTextBox.Text = MemoryOperation.SubtractFromMemory().ToString();
                 }
             }
-            else if (text == "MC")
+            else if (button.Text == "MC")
             {
 				MemoryOperation.ClearMemory();
 				_displayTextBox.Text = "0";
@@ -289,10 +317,9 @@ namespace CalculatorApp
 				_toggleBtn.Text = Resources.ScientificModeButtonText;
 			}
 			else if (_isScientificMode)
-			{        
-                _toggleBtn.Text = Resources.SimpleModeButtonText;
-			}
-			
+			{
+				_toggleBtn.Text = Resources.SimpleModeButtonText;
+			}			
 		}
 
 
