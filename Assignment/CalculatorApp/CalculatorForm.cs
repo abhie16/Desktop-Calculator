@@ -133,16 +133,16 @@ namespace CalculatorApp
 						Dock = DockStyle.Fill
                     };
 
-					if(button.Text == "Del" || button.Text == "CE" || button.Text == "C")
+					if(buttonInfo.Type == "deleteSet")
 					{
 						button.Click += ClearButtonClick;
 					}
-                    else if (button.Text == "=")
+                    else if (buttonInfo.Type == "equalTo")
                     {
 						button.BackColor = Color.CornflowerBlue;
 						button.Click += CalculateButtonClick;
                     }
-                    else if (button.Text == "MC" || button.Text == "M+" || button.Text == "M-" || button.Text == "MS" || button.Text == "MR")
+                    else if (buttonInfo.Type == "memorySet")
                     {
 						button.Click += MemorySetClick;
                     }

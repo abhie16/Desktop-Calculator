@@ -7,5 +7,6 @@
         public int Row { get; set; }
         public int Column { get; set; }
         public CalculatorModes Mode { get; set; }
+        public string Type { get; set; }
     }
 }
